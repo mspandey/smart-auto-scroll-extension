@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.wrapper {
+  padding: 18px;
+}
+
+h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+label {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid;
+  font-size: 13px;
+}
+
+button {
+  width: 100%;
+  padding: 9px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ---------------- THEMES ---------------- */
+
+/* Dark Minimal */
+.dark {
+  background: #111;
+  color: #eaeaea;
+}
+.dark input, .dark select {
+  background: #1c1c1c;
+  border-color: #2a2a2a;
+  color: white;
+}
+.dark #startBtn { background: white; color: black; }
+.dark #stopBtn { background: #2a2a2a; color: #bbb; }
+
+/* Soft Pastel */
+.pastel {
+  background: #fdf6f9;
+  color: #444;
+}
+.pastel input, .pastel select {
+  background: #ffffff;
+  border-color: #f2c6de;
+  color: #444;
+}
+.pastel #startBtn { background: #ffb3c6; color: white; }
+.pastel #stopBtn { background: #ffd6e0; color: #444; }
+
+/* Cyber */
+.cyber {
+  background: #0f111a;
+  color: #00f0ff;
+}
+.cyber input, .cyber select {
+  background: #1a1d2b;
+  border-color: #00f0ff55;
+  color: #00f0ff;
+}
+.cyber #startBtn { background: #00f0ff; color: black; }
+.cyber #stopBtn { background: #ff0033; color: white; }
+
+/* Clean Light */
+.light {
+  background: #ffffff;
+  color: #222;
+}
+.light input, .light select {
+  background: #f4f4f4;
+  border-color: #ddd;
+  color: #222;
+}
+.light #startBtn { background: #222; color: white; }
+.light #stopBtn { background: #e0e0e0; color: #333; }
+.bubblegum {
+  background: #ffe6f0;
+  color: #5a2a4a;
+}
+.bubblegum input, .bubblegum select {
+  background: #fff0f6;
+  border-color: #ffb6d9;
+  color: #5a2a4a;
+}
+.bubblegum #startBtn {
+  background: #ff69b4;
+  color: white;
+}
+.bubblegum #stopBtn {
+  background: #ffc1e3;
+  color: #5a2a4a;
+}
+.blush {
+  background: #fff5f7;
+  color: #4a2a2a;
+}
+.blush input, .blush select {
+  background: #ffffff;
+  border-color: #f8c6d0;
+  color: #4a2a2a;
+}
+.blush #startBtn {
+  background: #f28ca6;
+  color: white;
+}
+.blush #stopBtn {
+  background: #ffd6df;
+  color: #4a2a2a;
+}
+.midnight {
+  background: #14090b;
+  color: #f5d0d6;
+}
+.midnight input, .midnight select {
+  background: #1f1014;
+  border-color: #6b1c2c;
+  color: #f5d0d6;
+}
+.midnight #startBtn {
+  background: #8b0000;
+  color: white;
+}
+.midnight #stopBtn {
+  background: #2a0f14;
+  color: #dba5af;
+}
+.satin {
+  background: #0a0a0a;
+  color: #f2f2f2;
+}
+.satin input, .satin select {
+  background: #151515;
+  border-color: #2a2a2a;
+  color: white;
+}
+.satin #startBtn {
+  background: #ffffff;
+  color: black;
+}
+.satin #stopBtn {
+  background: #1c1c1c;
+  color: #aaa;
+}
+
+</style>
+</head>
+
+<body class="dark">
+
+<div class="wrapper">
+  <h3>Auto Scroll</h3>
+
+  <label>Theme</label>
+  <select id="themeSelect">
+    <option value="dark">Dark Minimal</option>
+    <option value="pastel">Soft Pastel</option>
+    <option value="cyber">Cyber</option>
+    <option value="light">Clean Light</option>
+    <option value="bubblegum">Bubblegum Cute</option>
+<option value="blush">Soft Blush</option>
+<option value="midnight">Midnight Red</option>
+<option value="satin">Black Satin</option>
+
+  </select>
+
+  <label>Delay (ms)</label>
+  <input type="number" id="delayInput" value="17000">
+
+  <button id="startBtn">Start</button>
+  <button id="stopBtn">Stop</button>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
